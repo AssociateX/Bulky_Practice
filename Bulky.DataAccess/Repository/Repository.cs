@@ -9,7 +9,7 @@ using Bulky.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 namespace Bulky.DataAccess.Repository
 {
-    class Repository<T> : IRepository<T> where T : class
+   public class Repository<T> : IRepository<T> where T : class
     {
         private readonly ApplicationDbContext _db;
         internal DbSet<T> dbSet ;
@@ -50,6 +50,5 @@ namespace Bulky.DataAccess.Repository
            dbSet.RemoveRange(entity);
         }
 
-      
-    }
+           }
 }
